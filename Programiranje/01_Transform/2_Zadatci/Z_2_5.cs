@@ -14,19 +14,16 @@ c) Kada se odradio b) zadatak neka debug ispiše kolika je trenutna veličina Z 
 public class Z_2_5 : MonoBehaviour
 {
     public bool a, b, c;
-	
-	public float z;
 
     public void Start()
     {
         if (b)
         {
-            transform.Rotate(new Vector3(0, 0, 89));
-			z +=
+            transform.localScale += new Vector3(0, 0, 89);
         }
         if (c)
         {
-            Debug.Log("trenutna velicina Z osi = " + (transform.rotation.eulerAngles.z));
+            Debug.Log("trenutna velicina Z osi = " + (transform.localScale.z));
         }
     }
 
@@ -34,7 +31,7 @@ public class Z_2_5 : MonoBehaviour
     {
         if (a)
         {
-            transform.Rotate(new Vector3(0, 0.25f, 0));
+            transform.localScale += new Vector3(0, 0.25f, 0);
         }
     }
 }
